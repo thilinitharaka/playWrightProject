@@ -1,5 +1,5 @@
-
-exports.FirstProjectPage = class FirstProjectPage {
+require("dotenv").config();
+exports.AppFunctionalityPage = class AppFunctionalityPage {
 
     constructor(page) {
 
@@ -27,7 +27,8 @@ exports.FirstProjectPage = class FirstProjectPage {
     async navigateToTheUrl() {
 
         //Navigate to the url
-        await this.page.goto('https://the-internet.herokuapp.com/');
+        await this.page.goto(process.env.BASE_URL)
+
     }
 
     async checkboxfunctianlity() {
@@ -40,7 +41,6 @@ exports.FirstProjectPage = class FirstProjectPage {
 
         //Check the second check box again
         await this.secondCheckbox.uncheck();
-
 
     }
 
@@ -102,8 +102,6 @@ exports.FirstProjectPage = class FirstProjectPage {
         //Click on the second option in the drop down
         await this.secondOption.selectOption('2');
 
-
     }
-
 
 }
