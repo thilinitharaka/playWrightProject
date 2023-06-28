@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { AppFunctionalityPage } from '../../pages/appFunctionalityPage'
+import { AppFunctionalityPage } from '../../pages/AppFunctionalityPage'
 
 test('Navigate to the herokuapp website and verify the functinality of check box', async ({ page }) => {
 
